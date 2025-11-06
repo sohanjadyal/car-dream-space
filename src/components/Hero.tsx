@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroCarImage from "@/assets/hero-car.jpg";
 
 const Hero = () => {
@@ -30,13 +31,17 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="group">
-              Explore Collection
-              <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="outline">
-              Schedule Visit
-            </Button>
+            <a href="#collection">
+              <Button size="lg" className="group">
+                Explore Collection
+                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
+            <Link to="/schedule-test-drive">
+              <Button size="lg" variant="outline">
+                Schedule Visit
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

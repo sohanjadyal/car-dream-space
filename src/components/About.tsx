@@ -65,23 +65,6 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
-        {/* Story Section */}
-        <div className="max-w-4xl mx-auto text-center mb-24 animate-fade-in">
-          <h2 className="text-5xl font-bold mb-6">
-            Our <span className="text-primary">Story</span>
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Founded in 1998, LUXAUTO began with a simple vision: to redefine the luxury car buying experience. 
-            What started as a boutique showroom has grown into one of the most prestigious automotive destinations, 
-            trusted by discerning clients worldwide.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Today, we represent the pinnacle of automotive excellence, offering not just vehicles, 
-            but a gateway to unparalleled luxury, performance, and innovation. Our commitment to perfection 
-            in every detail has earned us recognition as industry leaders.
-          </p>
-        </div>
-
         {/* Values Section */}
         <div className="mb-24">
           <h3 className="text-4xl font-bold text-center mb-12">
