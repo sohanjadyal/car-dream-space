@@ -109,11 +109,11 @@ const ScheduleTestDrive = () => {
           <div className="max-w-3xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12 animate-fade-in">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Car className="h-8 w-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 mb-4 border border-gold/20">
+                <Car className="h-8 w-8 text-gold" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-4">
-                Schedule a <span className="text-primary">Test Drive</span>
+                Schedule a <span className="bg-gradient-to-r from-gold via-gold-muted to-gold bg-clip-text text-transparent">Test Drive</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Experience the thrill firsthand. Choose your dream vehicle and pick a time that works for you.
@@ -121,7 +121,7 @@ const ScheduleTestDrive = () => {
             </div>
 
             {/* Form */}
-            <div className="p-8 rounded-xl bg-card border border-border animate-slide-up">
+            <div className="p-8 rounded-xl bg-card border border-border animate-slide-up shadow-[0_10px_50px_rgba(0,0,0,0.6)]">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -270,7 +270,7 @@ const ScheduleTestDrive = () => {
                   </div>
 
                   <div className="pt-4">
-                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    <Button type="submit" size="lg" className="w-full shadow-[0_0_30px_rgba(45,90,55,0.3)] hover:shadow-[0_0_40px_rgba(45,90,55,0.5)]" disabled={isSubmitting}>
                       {isSubmitting ? "Scheduling..." : "Schedule Test Drive"}
                     </Button>
                   </div>

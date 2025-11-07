@@ -8,51 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 92%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 92%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 90% 55%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 88%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 50%;
 
-    --accent: 199 89% 48%;
+    --accent: 200 85% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 199 89% 48%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 45 90% 55%;
 
     --radius: 0.75rem;
     
-    /* Automotive Design Tokens */
-    --chrome: 0 0% 75%;
-    --chrome-light: 0 0% 85%;
-    --steel: 0 0% 25%;
+    /* Luxury Automotive Design Tokens */
+    --graphite: 0 0% 20%;
+    --graphite-light: 0 0% 28%;
+    --metallic: 0 0% 35%;
+    --gold: 45 90% 55%;
+    --gold-muted: 45 60% 45%;
+    --electric-blue: 200 85% 50%;
     
     /* Gradients */
-    --gradient-shine: linear-gradient(135deg, hsl(0 0% 15%) 0%, hsl(0 0% 25%) 50%, hsl(0 0% 15%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 10%) 100%);
+    --gradient-metallic: linear-gradient(135deg, hsl(0 0% 12%) 0%, hsl(0 0% 20%) 40%, hsl(0 0% 28%) 60%, hsl(0 0% 18%) 100%);
+    --gradient-shine: linear-gradient(120deg, hsl(0 0% 10%) 0%, hsl(0 0% 25%) 30%, hsl(45 90% 55% / 0.15) 50%, hsl(0 0% 25%) 70%, hsl(0 0% 10%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 3%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 3%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 60% 40%) 0%, hsl(45 90% 55%) 50%, hsl(45 60% 40%) 100%);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.3);
-    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.5);
+    --shadow-glow-gold: 0 0 40px hsl(45 90% 55% / 0.25);
+    --shadow-glow-blue: 0 0 40px hsl(200 85% 50% / 0.2);
+    --shadow-card: 0 20px 60px hsl(0 0% 0% / 0.7);
+    --shadow-elegant: 0 10px 40px hsl(0 0% 0% / 0.6);
     
     /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -73,8 +82,8 @@ All colors MUST be HSL.
 
   .dark {
     /* Using same dark theme as default for consistent automotive look */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 92%;
   }
 }
 

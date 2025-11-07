@@ -63,7 +63,7 @@ const CarCollection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-5xl font-bold mb-4">
-            Our <span className="text-primary">Collection</span>
+            Our <span className="bg-gradient-to-r from-gold via-gold-muted to-gold bg-clip-text text-transparent">Collection</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Discover the perfect blend of power, elegance, and innovation in every vehicle

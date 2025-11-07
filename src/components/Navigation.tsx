@@ -7,11 +7,11 @@ const Navigation = () => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/30 bg-background/70 backdrop-blur-xl">
       <div className="container mx-auto px-6">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="hover:opacity-80 transition-opacity">
-            <span className="text-2xl font-bold tracking-tight">Velocity wheels</span>
+            <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-gold via-foreground to-gold bg-clip-text text-transparent">Velocity wheels</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
