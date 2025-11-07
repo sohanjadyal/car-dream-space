@@ -19,22 +19,14 @@ const Navigation = () => {
           
           <div className="hidden md:flex items-center gap-8">
             {isHomePage ? (
-              <>
-                <a href="#collection" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                  Collection
-                </a>
-                <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                  About
-                </a>
-              </>
+              <a href="#collection" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Collection
+              </a>
             ) : (
               <Link to="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
             )}
-            <Link to="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </Link>
             <Link to="/schedule-test-drive">
               <Button variant="default" size="sm">
                 Schedule Test Drive
