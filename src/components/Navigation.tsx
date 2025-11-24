@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Bell, LogOut, User } from "lucide-react";
+import { Menu, Bell, LogOut, User, Shield } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useState, useEffect } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -13,6 +16,28 @@ const Navigation = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const { user, signOut } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      checkAdminStatus();
+    } else {
+      setIsAdmin(false);
+    }
+  }, [user]);
+
+  const checkAdminStatus = async () => {
+    if (!user) return;
+
+    const { data } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", user.id)
+      .eq("role", "admin")
+      .maybeSingle();
+
+    setIsAdmin(!!data);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/30 bg-background/70 backdrop-blur-xl">
@@ -52,6 +77,22 @@ const Navigation = () => {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => {/* Navigate to notifications is handled by Link above */}}>
+                      <Bell className="mr-2 h-4 w-4" />
+                      Notifications
+                    </DropdownMenuItem>
+                    {isAdmin && (
+                      <>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                          <Link to="/admin" className="flex items-center cursor-pointer">
+                            <Shield className="mr-2 h-4 w-4" />
+                            Admin Dashboard
+                          </Link>
+                        </DropdownMenuItem>
+                      </>
+                    )}
+                    <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={signOut}>
                       <LogOut className="mr-2 h-4 w-4" />
                       Sign Out
