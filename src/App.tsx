@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import ScheduleTestDrive from "./pages/ScheduleTestDrive";
 import Auth from "./pages/Auth";
 import Notifications from "./pages/Notifications";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/schedule-test-drive" element={<ScheduleTestDrive />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/notifications" element={<Notifications />} />
+            <Route path="/admin" element={<Admin />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
